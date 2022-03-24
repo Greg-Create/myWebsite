@@ -7,7 +7,8 @@
 }
 
 body{
-    background: var(--color-bg);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,194,194,1) 0%, rgb(31, 168, 196) 100%);
 }
 
 a {
@@ -18,28 +19,18 @@ a {
 .gradient__bg
     {
 
-        /* ff 3.6+ */
-        background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
-    
-        /* safari 5.1+,chrome 10+ */
-        background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
-    
-        /* opera 11.10+ */
-        background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
-    
-        /* ie 10+ */
-        background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
-    
-        /* global 92%+ browsers support */
-        background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,194,194,1) 0%, rgb(31, 168, 196) 100%);
     
     }
 
 
     .gradient__text{
-        background:var(--gradient-text);
-        background-clip: text;
-        -webkit-background-clop: text;
+        background: #1FA8C4;
+        background: -webkit-linear-gradient(to right, #1FA8C4 0%, #F5F5F5 67%);
+        background: -moz-linear-gradient(to right, #1FA8C4 0%, #F5F5F5 67%);
+        background: linear-gradient(to right, #1FA8C4 0%, #F5F5F5 67%);
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
