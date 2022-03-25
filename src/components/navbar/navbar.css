@@ -37,8 +37,9 @@
 
 .gpt3__navbar-links_container p,
 .gpt3__navbar-sign p,
-.gpt3__navbar-menu_container p {
-    color: #fff;
+.gpt3__navbar-menu_container p
+{
+    color: white;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -49,17 +50,27 @@
     cursor: pointer;
 }
 
+.gpt3__navbar-menu_container p {
+    color:#26A9C4;
+    text-align: center;
+    padding: 1px;
+}
+
+.gpt3__navbar-sign button:hover{
+    opacity:0.8;
+}
+
 .gpt3__navbar-links_container p :hover,
 .gpt3__navbar-menu_container p:hover,
 .gpt3__navbar-sign p:hover  {
-color:#ff4820;
+opacity: 0.6;
 }
 
 .gpt3__navbar-sign button,
 .gpt3__navbar-menu_container button {
     padding: 0.5rem 1rem;
-    color: #fff;
-    background: #FF4820;
+    color: #26A9C4;
+    background: white;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -75,6 +86,8 @@ color:#ff4820;
 .gpt3__navbar-menu_container button:hover{
     opacity: 0.7;
 }
+
+
 
 .gpt3__navbar-menu {
     margin-left: 1rem;
@@ -96,9 +109,8 @@ color:#ff4820;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    
     text-align: end;
-    background: var(--color-footer);
+    background: white;
     padding: 2rem;
     position: absolute;
     right: 0;
