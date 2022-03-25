@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import './signUp.css'
 import {AiOutlineClose} from 'react-icons/ai'
-import UserPool from "../../UserPool"
 
 
 
@@ -10,28 +9,7 @@ const SignUp =(props) => {
 
         const [email, setEmail] = useState("")
         const [password, setPassword] = useState("")
-        const [submit, setSubmit] =useState(false)
-        const [ state, setState] = useState(false)
-    
         
-        const onSubmit  =(event) =>{
-            event.preventDefault()
-        
-            UserPool.signUp(email, password, [] , null, (err, data) => {
-                if(err){
-                    console.error(err)
-                    alert(err)
-                    
-                }
-
-                
-                props.setTrigger(false)
-
-            })
-
-            
-            
-        }
         
 
 
@@ -58,11 +36,11 @@ const SignUp =(props) => {
             </div>
 
             <div className="gpt__login-content_form submit">
-                <button type="submit" onClick={onSubmit}> Submit</button>
+                <button type="submit" > Submit</button>
             </div>
         </div>  
 
-        <AiOutlineClose className="gpt__login-content-button-close" id="close-button" onClick={() => props.setTrigger(false) }/>
+        <AiOutlineClose className="login-close-button" onClick={() => props.setTrigger(false)}/>
         </div>
 
        

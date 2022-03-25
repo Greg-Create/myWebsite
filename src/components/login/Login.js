@@ -1,7 +1,6 @@
 import React, { useEffect, useState , useContext} from "react"
 import './login.css'
 import {AiOutlineClose} from 'react-icons/ai'
-import { AccountContext } from "../../Account"
 
 
 
@@ -9,40 +8,11 @@ const Login =(props) => {
 
         const [email, setEmail] = useState("")
         const [password, setPassword] = useState("")
-        const [submit, setSubmit] =useState(false)
-        const [ state, setState] = useState(false)
+       
+
+       
     
-        
-        const { authenticate} = useContext(AccountContext)
-        
-        const onSubmit  =(event) =>{
-            event.preventDefault()
-            props.setTrigger(false)
-            authenticate(email, password) 
-            
-            .then(
-                data => {console.log("Logged In", data)})
-            .catch(err  => {
-                console.error("Failled to login", err)
-            })
-
-            
-           
-        }
-
-            
-            
-        
-        
-
-
-    
-   
-
-
-    
-
-    return ( (props.trigger) ? (
+     return ( (props.trigger == true) ? (
     <div className="gpt__login ">
         <div className="gpt__login-content ">
             <h1>Login</h1>
@@ -59,11 +29,11 @@ const Login =(props) => {
             </div>
 
             <div className="gpt__login-content_form submit">
-                <button type="submit" onClick={onSubmit}> Login</button>
+                <button type="submit" > Login</button>
             </div>
         </div>  
 
-        <AiOutlineClose className="gpt__login-content-button-close" id="close-button" onClick={() => props.setTrigger(false) }/>
+       <AiOutlineClose className="login-close-button" onClick={() => props.setTrigger(false)}/>
         </div>
 
        

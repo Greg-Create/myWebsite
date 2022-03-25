@@ -5,9 +5,6 @@ import logo from '../../assets/logo.svg';
 import { useState, useEffect, useContext } from 'react';
 import SignUp from "../Sign-up/SignUp"
 import Login from "../login/Login"
-import { Account } from '../../Account';
-import Status from '../../Status';
-import {AccountContext} from '../../Account'
 
 
 
@@ -32,12 +29,21 @@ const Navbar = (props) => {
     
     
     useEffect(() => {
-        if (signupPopup) {
+        if (signupPopup || loginPopup) {
           document.body.style.overflow = 'hidden';
         } else {
           document.body.style.overflow = 'unset';
         }
-      }, [signupPopup]);
+      }, [signupPopup, loginPopup]);
+
+
+    
+   function handleClickOutside () {
+     setloginPopup(false)
+     setsignupPopup(false)
+   }
+    
+      document.addEventListener("mousedown", handleClickOutside);
 
      
     return (
@@ -56,23 +62,21 @@ const Navbar = (props) => {
             
             {value? <h1>Logged in </h1> :
             <div className='gpt3__navbar-sign'>
-                <p type="button" onClick={()=> setloginPopup(true)}>Sign in</p>
+                <p type="button" onClick={()=>setloginPopup(true)}>Log In</p>
                 <button type="button" onClick={()=> setsignupPopup(true)}>Sign Up</button>
                 </div>
             }
              </div>
 
-           <Account>
-           <Status setValue={setValue}/>
+           
             <SignUp trigger={signupPopup} setTrigger={setsignupPopup}>
                 <h1>My login</h1>
             </SignUp>
 
             <Login trigger={loginPopup} setTrigger={ setloginPopup}>
-
+              <h1>Login</h1>
             </Login>
 
-            </Account>
            
            
             <div className="gpt3__navbar-menu">
