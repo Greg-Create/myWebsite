@@ -2,7 +2,12 @@ import React from 'react'
 import './navbar.css'
 import {RiMenu3Line, RiCloseLine} from 'react-icons/ri'
 import logo from '../../assets/logo.svg';
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import SignUp from "../Sign-up/SignUp"
+import Login from "../login/Login"
+import { Account } from '../../Account';
+import Status from '../../Status';
+import {AccountContext} from '../../Account'
 
 
 
@@ -18,13 +23,23 @@ const Menu =() => (
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
-   
+    const [value, setValue] = useState(false)
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [signupPopup, setsignupPopup] = useState(false)
+    const [loginPopup, setloginPopup] = useState(false)
     
     
-    
+    useEffect(() => {
+        if (signupPopup) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'unset';
+        }
+      }, [signupPopup]);
+
+     
     return (
         <div className='gpt3__navbar'>
             <div className='gpt3__navbar-links'>
@@ -35,10 +50,29 @@ const Navbar = () => {
                     <Menu />
                 </div>
             </div>
+
+            <div className='gpt3__navbar-log'>
+
+            
+            {value? <h1>Logged in </h1> :
             <div className='gpt3__navbar-sign'>
-                <p>Sign in</p>
-                <button type="button">Sign Up</button>
-            </div>
+                <p type="button" onClick={()=> setloginPopup(true)}>Sign in</p>
+                <button type="button" onClick={()=> setsignupPopup(true)}>Sign Up</button>
+                </div>
+            }
+             </div>
+
+           <Account>
+           <Status setValue={setValue}/>
+            <SignUp trigger={signupPopup} setTrigger={setsignupPopup}>
+                <h1>My login</h1>
+            </SignUp>
+
+            <Login trigger={loginPopup} setTrigger={ setloginPopup}>
+
+            </Login>
+
+            </Account>
            
            
             <div className="gpt3__navbar-menu">
