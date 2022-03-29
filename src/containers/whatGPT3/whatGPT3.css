@@ -20,10 +20,11 @@
 }
 
 .gpt3__whatgpt3-hide{
-    display: none;
+    visibility: hidden;
 }
 
 .gpt3__whatgpt3-feature {
+   
     display: flex;
 }
 

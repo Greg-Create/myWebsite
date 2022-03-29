@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import './signUp.css'
 import {AiOutlineClose} from 'react-icons/ai'
 
@@ -12,15 +12,38 @@ const SignUp =(props) => {
         
         
 
-
+        let backup = ""
+        
     
    
+      function close  ()   {
+          props.setTrigger(false)
+           backup = "module-closed"
+           console.log("module closed")
+       
+        }
 
+    const menuRef = useRef()
+  
+    useEffect(() =>{
+    
+    const checkifclickedouside = e => {
+        if (props.trigger && !menuRef.current.contains(e.target)){
+            props.setTrigger(true)
+    }}
+
+    document.addEventListener("mousedown", checkifclickedouside)
+
+    return () => {
+        document.removeEventListener("mousedown", checkifclickedouside)
+    }
+    
+    }, [props.trigger])
 
     
 
     return ( (props.trigger) ? (
-    <div className="gpt__login ">
+    <div className={`gpt__login  ${backup}`} ref={menuRef}>
         <div className="gpt__login-content ">
             <h1>Sign Up</h1>
        
@@ -38,9 +61,13 @@ const SignUp =(props) => {
             <div className="gpt__login-content_form submit">
                 <button type="submit" > Submit</button>
             </div>
+            <AiOutlineClose className="login-close-button" onClick={close}/>
         </div>  
 
-        <AiOutlineClose className="login-close-button" onClick={() => props.setTrigger(false)}/>
+        
+        
+        
+        
         </div>
 
        

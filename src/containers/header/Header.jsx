@@ -18,10 +18,7 @@ const Header = () => {
             <button type='button'>Get Strarted</button>
             </div>
 
-            <div className='gpt3__header-content__people'>
-                <img src={people} alt='people'/>
-                <p>1600 users have submited</p>
-            </div>
+            
             </div>
             <div className='gpt3__header-image'>
             <img src="https://www.transparentpng.com/thumb/shark/MRDEW4-first-visit.png" alt="blue toy happy shark clipart free download @transparentpng.com" />

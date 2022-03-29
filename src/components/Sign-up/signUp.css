@@ -15,7 +15,7 @@
     padding: 20px 30px;
     width: 100%;
     max-width: 380px;
-    background-color: var(--color-footer);
+    background-color: white;
     border-radius: 10px;
     top:-400px;
     animation: drop 0.5s ease forwards;
@@ -33,20 +33,28 @@
 }
 
 
+@keyframes rise{
+    0%{ opacity:1}
+    50%{ transform: translateY(-175px); opacity: 0.5;}
+    100%{transform: translate(-350px); opacity: 0}
+}
 
+.module-closed{
+    animation: rise 0.5s ease forwards;
+}
 
 
 .gpt__login-content-button-close{
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    color:white;
+    position: relative;
+    
+    
+    color:#26A9C4;
 }
 
 .gpt__login-content h1{
     text-align: center;
     font-family: var(--font-family);
-    color:#fff;
+    color:#26A9C4;
     margin:10px 0px 20px;
     font-size: 25px;
 }
@@ -57,7 +65,7 @@
 
 .gpt__login-content_form label{
     font-size: 14px;
-    color:#fff;
+    color:#26A9C4;
     
 
 }
@@ -69,16 +77,22 @@
      width:100%;
      padding:10px;
      outline: none;
-     border: 1px solid #aaa;
+     border: 1px solid #26A9C4;
     border-radius: 5px;
 }
 
 .login-close-button{
-    position: relative;
-   color:white;
+    position: absolute;
+   color:#26A9C4;
    stroke:3px;
+   top:16px;
+   right:20px
    
     
+}
+
+.login-close-button:hover{
+    opacity:0.6;
 }
 
 
@@ -88,9 +102,13 @@
     border:none;
     outline: none;
     font-size: 16px;
-    background: #FF4820;
+    background: #26A9C4;
     color: #f5f5f5;
     border-radius: 10px;
     cursor:pointer;
+}
+
+.submit button:hover{
+    opacity: 0.7;
 }
 

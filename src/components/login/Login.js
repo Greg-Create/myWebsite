@@ -13,7 +13,7 @@ const Login =(props) => {
        
     
      return ( (props.trigger == true) ? (
-    <div className="gpt__login ">
+    <div className="gpt__login "> 
         <div className="gpt__login-content ">
             <h1>Login</h1>
        
@@ -31,9 +31,11 @@ const Login =(props) => {
             <div className="gpt__login-content_form submit">
                 <button type="submit" > Login</button>
             </div>
+       
+            <AiOutlineClose className="login-close-button" onClick={() => props.setTrigger(false)}/>
         </div>  
 
-       <AiOutlineClose className="login-close-button" onClick={() => props.setTrigger(false)}/>
+       
         </div>
 
        

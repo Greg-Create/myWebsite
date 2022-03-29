@@ -1,12 +1,13 @@
 import React from "react";
 import possibilityImage from "../../assets/possibility.png";
 import "./possibility.css";
+import whale from "../../assets/whale-svg-free-3-removebg-preview.png"
 
 const Possibility = () => {
   return (
     <div className="gpt__possibility section__padding" id="possibility">
       <div className="gpt__possibility-image">
-        <img src={possibilityImage} alt="possibility" />
+        <img src={whale} alt="possibility" />
       </div>
 
       <div className="gpt__possibility-content">

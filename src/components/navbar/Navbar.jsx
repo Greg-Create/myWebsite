@@ -5,6 +5,7 @@ import logo from '../../assets/logo.svg';
 import { useState, useEffect, useContext } from 'react';
 import SignUp from "../Sign-up/SignUp"
 import Login from "../login/Login"
+import { useRef } from 'react/cjs/react.production.min';
 
 
 
@@ -38,15 +39,14 @@ const Navbar = (props) => {
 
 
     
-   function handleClickOutside () {
-     setloginPopup(false)
-     setsignupPopup(false)
-   }
+
     
-      document.addEventListener("mousedown", handleClickOutside);
+
 
      
-    return (
+    
+    
+      return (
         <div className='gpt3__navbar'>
             <div className='gpt3__navbar-links'>
                 <div className='gpt3__navbar-links_logo'>
@@ -69,7 +69,7 @@ const Navbar = (props) => {
              </div>
 
            
-            <SignUp trigger={signupPopup} setTrigger={setsignupPopup}>
+            <SignUp  trigger={signupPopup} setTrigger={setsignupPopup}>
                 <h1>My login</h1>
             </SignUp>
 
