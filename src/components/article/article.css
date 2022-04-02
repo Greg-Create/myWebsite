@@ -15,6 +15,9 @@
     transform: scale(1.05)
 }
 
+.article-hidden{
+    visibility:hidden;
+}
 
 
 
@@ -58,7 +61,7 @@
     cursor: pointer;
 }
 
-..gpt__blog-container_article-content img{
+.gpt__blog-container_article-content img{
     height:100%;
     width: 100%;
 }

@@ -12,10 +12,10 @@ import { useRef } from 'react/cjs/react.production.min';
 const Menu =() => (
     <>
    <p><a href="#home">Home</a></p>
-   <p><a href="#wgpt3">Greg</a></p>
-   <p><a href="#possibility">Open Ai</a></p>
-   <p><a href="#features">Case Studies</a></p>
-   <p><a href="#blog">Library</a></p>
+   <p><a href="#Something">Something</a></p>
+   <p><a href="#Shark">Shark</a></p>
+   <p><a href="#Whale">Whale</a></p>
+   <p><a href="#water">Water</a></p>
    </>
 )
 

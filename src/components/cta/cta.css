@@ -6,8 +6,7 @@
     padding:2rem;
     margin:4rem;
     border-radius: 1rem;
-    background: rgb(2,0,36);
-background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,252,252,1) 0%, rgba(120,201,217,1) 58%, rgba(0,212,255,1) 100%);
+    background-color: white;
     opacity: 0.8;
     transition: all .2s ease-in-out;
 
@@ -24,7 +23,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,252,252,1) 0%, r
     font-weight: 500;
     font-size: 12px;
     line-height: 30px;
-    color:white;
+    color:#26A9C4;
     
 }
 
@@ -33,7 +32,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,252,252,1) 0%, r
     font-weight: 800;
     font-size: 24px;
     line-height: 45px;
-    color:white;
+    color:#26A9C4;
 }
 
 .gpt__cta-button{
@@ -44,10 +43,14 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,252,252,1) 0%, r
     
 }
 
+.gpt_cta-hidden{
+    visibility: hidden;
+}
+
 .gpt__cta-button button{
-    background: white;
+    background: #26A9C4;
     border-radius:40px;
-    color: #26A9C4;
+    color: white;
     font-family: var(--font-family);
     font-weight: bold;
     font-size: 18px;
