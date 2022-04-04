@@ -50,7 +50,7 @@ const Navbar = (props) => {
         <div className='gpt3__navbar'>
             <div className='gpt3__navbar-links'>
                 <div className='gpt3__navbar-links_logo'>
-                    <img src={logo} alt="logo" />
+                    <h1>Greg's Website</h1> 
                 </div>
                 <div className='gpt3__navbar-links_container'>
                     <Menu />
